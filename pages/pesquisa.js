@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
-import Link from 'next/link'
+import PageTitle from '../components/PageTitle'
 
 const Pesquisa = () => {
   const [ form, setForm ] = useState({
     Nome: '',
     Email: '',
-    Whatsapp: ''
+    Whatsapp: '',
+    Nota: 0
   })
+  const notas = [0, 1, 2, 3, 4, 5]
   const [ sucess, setSucess ] = useState(false)
   const [ retorno, setRetorno ] = useState({})
   const save = async () => {
@@ -32,6 +34,7 @@ const onChange = evt => {
 }
     return (
         <div className='pt-6' >
+          <PageTitle title='Pesquisa'/>
             <h1 className='text-center font-bold my-6 text-2xl mb-6' >Críticas e Sugestões</h1>
             <p className='text-center'>Esse estabelecimento está atento a todas as sugestões dos nossos clientes.<br/> E estamos prontos para melhor atender-los </p>
           { !sucess &&  <div className='w-1/5 mx-auto' >
@@ -45,6 +48,17 @@ const onChange = evt => {
               <label className='font-bold' >Whatsapp:</label>
               <input type='text' className='p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Whatsapp' onChange={onChange} name='Whatsapp' value={form.Whatsapp} />
 
+              <label className='font-bold' >Nota para o Estabelecimento:</label>
+            <div className='flex' >
+             {notas.map(nota=> {
+              return (<label className='block w-1/6 text-center' >
+                       {nota}<br/>
+                       <input type='radio' name='Nota' value={nota} onChange={onChange} />
+                     </label> )
+            })
+            }
+            </div>
+
               <button className=' bg-blue-300 px-20 p-4 font-bold rounded-lg shadow-lg hover:shadow ' onClick={save}>Salvar</button>
             </div>}
             {sucess && <div className='w-1/5 mx-auto' >
@@ -57,7 +71,9 @@ const onChange = evt => {
               }
               {
                 retorno.showCoupon && <div className='text-center border p-4 mb-4' >
-                 <span className='font-bold' >{retorno.Promo}</span> 
+                 <span className='font-bold block mb-2' >{retorno.Promo}</span>
+                 <br/>
+                 <span className='italic'> Tire um print ou foto desta tela e apresente no estabelecimento.</span> 
                  </div>
               }
             </div> }
