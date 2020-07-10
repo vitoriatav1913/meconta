@@ -59,7 +59,7 @@ const onChange = evt => {
             }
             </div>
 
-              <button className=' bg-blue-300 px-20 p-4 font-bold rounded-lg shadow-lg hover:shadow ' onClick={save}>Salvar</button>
+              <button className=' bg-blue-300 px-20 p-4 font-bold rounded-lg shadow-lg hover:shadow ' onClick={save}>Enviar</button>
             </div>}
             {sucess && <div className='w-1/5 mx-auto' >
               <p className='mb-6 bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md p-4' >Obrigado por Participar</p> 

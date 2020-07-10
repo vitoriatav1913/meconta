@@ -6,9 +6,9 @@ const Header = () => {
     return(
   <React.Fragment>
     <div className='bg-gray-200 p-4 shadow-md'>
-      <div className='container mx-auto'>
+      <div className='container mx-auto'> 
       <Link href= '/' >
-        <a> <img className='mx-auto resize-none'src= '/mecontalogo.png' alt='MeConta'/></a>
+        <a> <img className='mx-auto resize-none 'src= '/mecontalogo.png' alt='MeConta'/></a>
          </Link>
        </div>
      </div>
