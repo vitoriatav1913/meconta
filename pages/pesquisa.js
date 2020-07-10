@@ -38,18 +38,10 @@ const onChange = evt => {
           <PageTitle title='Pesquisa'/>
             <h1 className='text-center font-bold my-6 text-2xl mb-6' >Críticas e Sugestões</h1>
             <p className='text-center'>Esse estabelecimento está atento a todas as sugestões dos nossos clientes.<br/> E estamos prontos para melhor atender-los </p>
-<<<<<<< HEAD
           { !sucess &&  <div className='w-1/5 mx-auto ' >
               <label className='font-bold ' >Seu Nome:</label>
 
               <input type='text' className='p-4 block shadow  bg-blue-100 my-6  rounded ' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome} />
-=======
-          { !sucess &&  
-          <div className='flex flex-col justify-center my-4' >
-              <label className='font-bold text-center' >Seu Nome:</label>
-
-              <input type='text' className='lg:w-2/5 lg:mx-auto mx-2 p-4 block shadow bg-blue-100 my-4 rounded' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome}  />
->>>>>>> 8c27d4ee1bbd28a4cb19634c90f28f9137ba047c
 
               <label className='font-bold text-center' >Email:</label>
               <input type='text' className='lg:w-2/5 lg:mx-auto mx-2 p-4 block shadow bg-blue-100 my-4 rounded' placeholder='Email' onChange={onChange} name='Email' value={form.Email}   />
@@ -60,13 +52,8 @@ const onChange = evt => {
               <label className='font-bold text-center' >Digite aqui sua Sugestão ou Crítica:</label>
               <input type='text' className='lg:w-2/5 lg:mx-auto mx-2 p-4 block shadow bg-blue-100 my-4 rounded' placeholder='Form' onChange={onChange} name='Form' value={form.Form} />
 
-<<<<<<< HEAD
               <label className='font-bold' >Nota para o Estabelecimento:</label>
               <div className='flex' >
-=======
-              <label className='text-center font-bold' >Nota para o Estabelecimento:</label>
-            <div className='flex flex-row justify-center' >
->>>>>>> 8c27d4ee1bbd28a4cb19634c90f28f9137ba047c
              {notas.map(nota=> {
               return (<label className='mx-2 block text-center' >
                        {nota}<br/>

@@ -6,7 +6,7 @@ const Sobre = () => {
     return (
         <div>
             <PageTitle title='Sobre'/>
-            <h1 className='font-bold text-4xl text-center italic' >Sobre nós</h1>
+            <h1 className='font-bold text-4xl text-center italic' >SOBRE NÓS</h1>
             <p>Aqui nesse tópico contamos sobre a empresa. É super importante
                 fazer uma descrição breve e rápida que possa impactar o cliente <br/>
             </p>
