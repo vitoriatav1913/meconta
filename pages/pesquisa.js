@@ -6,6 +6,7 @@ const Pesquisa = () => {
     Nome: '',
     Email: '',
     Whatsapp: '',
+    Form: '',
     Nota: 0
   })
   const notas = [0, 1, 2, 3, 4, 5]
@@ -47,6 +48,9 @@ const onChange = evt => {
 
               <label className='font-bold' >Whatsapp:</label>
               <input type='text' className='p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Whatsapp' onChange={onChange} name='Whatsapp' value={form.Whatsapp} />
+
+              <label className='font-bold' >Digite aqui sua Sugestão ou Crítica:</label>
+              <input type='text' className='p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Form' onChange={onChange} name='Form' value={form.Form} />
 
               <label className='font-bold' >Nota para o Estabelecimento:</label>
             <div className='flex' >
